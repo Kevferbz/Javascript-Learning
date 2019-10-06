@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript const</h2>
+
+<p>Declaring a constant array does NOT make the elements unchangeble:</p>
+
+<h1 id="demo"></h1>
+<h1 id="num"></h1>
+
+<h2 id="print"></h2>
+
+<script>
+
+  //Const tag
+// Create an Array:
+const cars = ["Saab", "Volvo", "BMW"];
+
+// Change an element:
+cars[0] = "Toyota";
+
+// Add an element:
+cars.push("Fuck javascript");
+
+// Display the Array:
+document.getElementById("demo").innerHTML = cars;
+var x = 10;
+{
+  let x = 2;
+}
+document.getElementById("num").innerHTML = x;
+
+var y = 5;
+
+//For loop
+for (y = 0; y < 100; y++)
+{
+  //Something
+}
+document.getElementById("print").innerHTML = y;
+
+var name = {firstname: "something", secondname: "something"}
+var fruit = ["banana", "apple", "orange"];
+
+function myFunction()
+{
+  confirm("Press the damn button");
+}
+
+function press()
+{
+  var person = prompt("Please enter the damn name");
+
+if (person != null)
+  {
+  document.getElementById("gay").innerHTML = "Hello "  + person + "! how are you today ?";
+  }
+}
+
+
+//Write javascript code here
+function urlfunction()
+{
+  var url = "https://w3schools.com/my test.asp?name=ståle&car=saab"
+  var url_enc = encodeURIComponent(url);
+  var url_dec = decodeURIComponent(url_enc);
+  var res = "encoded url: " + url_enc + "<br>" +  "decoded url: " + url_dec;
+
+  document.getElementById("url").innerHTML = res;
+
+
+}
+
+function maxvalue()
+{
+  document.getElementById("max").innerHTML = Number.MAX_VALUE;
+}
+
+
+function evalfunction()
+{
+  var x = 10;
+  var y = 21;
+  var a = eval("x * y") + "<br>";
+  var b = eval("2 + 2") + "<br>";
+  var all = a + b;
+  document.getElementById("eval").innerHTML = all;
+}
+
+function isFinite()
+{
+  var a = isfinite(123);
+var b = isfinite(-232);
+var c = isfinite("hello");
+var abc = a+b+c;
+document.getElementById("isinf").innerHTML = abc;
+}
+
+switch (new Date().getDay) //if
+{
+  case 6:
+    test = "saturday";
+    break;
+    case 0:
+      text = "monday";
+      default:
+        text = "none"; //else
+}
+
+setTimeout(function(){
+document.getElementById("timeout").innerHTML = "Hello world"
+},10);
+
+
+//Functions
+function addnumbers(a, b){
+  return a + b;
+}
+x = addnumbers(1,2);
+
+
+//For loop
+for (var i = 0; i < 10; ++i)
+{
+  document.write(i + ": " + i*2 + "<br />");
+}
+var sum = 0;
+for (var i = 0; i < a.length; i++) {
+  sum += a[i];
+}
+html = "";
+for (var i of order) {
+  html += "<li>" + i + "</li>";
+}
+
+//WHile loop lesson
+var x = 1;
+while (x < 100) {
+  x *= 2;
+  document.write(x + ", ");
+}
+
+</script>
+
+<style>
+
+  button {
+    padding: 10px;
+  }
+
+</style>
+<h1 id="gay"></h1>
+
+<button onclick="press()">Try it</button>
+<button onclick="maxvalue()">Num</button>
+<h1 id="max"></h1>
+
+<h3>Click the button to evaluate/execute JavaScript code/expressions.
+
+  </h3>
+<button onclick="evalfunction()">Show eval</button>
+  <h2 id="eval"></h2>
+
+<h1 id="isinf"></h1>
+
+<h1 id="timeout"></h1>
+
+<button>Enter your name</button>
+</body>
+</html>
